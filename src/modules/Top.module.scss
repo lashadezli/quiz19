@@ -1,0 +1,23 @@
+.Main
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid white;
+    background: white;
+    padding: 30px 70px;
+    h1,button {
+        background: white;
+    }
+    button{
+        font-size: 20px;
+        border: none;
+    }
+
+}
+.Top
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

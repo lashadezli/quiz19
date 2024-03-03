@@ -1,0 +1,23 @@
+
+.Form{
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+    margin-left: 90px;
+.Searchbar
+{
+    input {
+        width: 300px;
+        padding: 20px;
+        border: none;
+        background-color: white;
+    }
+}
+  button{
+    padding: 20px;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+  }
+}
