@@ -4,6 +4,7 @@ import SearchBar from './components/Searchbar';
 import CountryList from './components/CountryList';
 import RegionFilter from './components/RegionFilter';
 import classes from './modules/Top.module.scss'
+import data from '../data';
 
 const App = () => {
   const [countries, setCountries] = useState([]);
@@ -12,17 +13,8 @@ const App = () => {
   const [selectedRegion, setSelectedRegion] = useState('');
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('/data.json');
-        setCountries(response.data);
-        setFilteredCountries(response.data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
+    setCountries(data);
+    setFilteredCountries(data);
   }, []);
 
   useEffect(() => {
@@ -40,6 +32,7 @@ const App = () => {
 
     setFilteredCountries(filtered);
   }, [searchTerm, selectedRegion, countries]);
+
 
   return (
     <div>
